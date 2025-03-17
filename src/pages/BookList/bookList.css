@@ -1,0 +1,18 @@
+.bookListPage {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.bookListPage h1 {
+  font-size: 2rem;
+  color: #646cff;
+  margin-bottom: 20px;
+}
+
+.editSection {
+  margin-top: 20px;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}

@@ -25,7 +25,7 @@
     <ol>
         <li>
             <strong>Navegue até a pasta do projeto:</strong>
-            <pre><code>cd reading-journal</code></pre>
+            <pre><code>cd Brenda_Reading-Journal-Fase-1</code></pre>
         </li>
         <li>
             <strong>Instale as dependências:</strong>

@@ -7,6 +7,7 @@ export default function About() {
     <NavBar />
       <main className="sobre-container">
         <h1 className="sobre-title">Sobre o Reading Journal</h1>
+        <img src="/public/estante-livros.svg" alt="imagem de uma estante de livros" className="sobre-imagem"/>
         <p className="sobre-text">
           O Reading Journal é uma aplicação desenvolvida para gerenciar sua
           lista de livros. Este projeto foi criado como parte da disciplina de
@@ -14,6 +15,7 @@ export default function About() {
           PUCRS. Aqui, você pode cadastrar, visualizar, editar e excluir livros
           da sua lista pessoal.
         </p>
+
       </main>
     </>
   );

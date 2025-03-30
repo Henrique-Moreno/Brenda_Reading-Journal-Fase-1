@@ -11,7 +11,27 @@
   margin-bottom: 20px;
 }
 
+.sobre-imagem {
+  max-width: 30%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
 .sobre-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .sobre-title {
+    font-size: 2rem;
+  }
+  .sobre-imagem {
+    max-width: 80%;
+  }
+}
+.sobre-texto {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 20px;

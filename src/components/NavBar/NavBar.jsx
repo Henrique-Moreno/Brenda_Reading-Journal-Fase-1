@@ -1,4 +1,5 @@
 import "./NavBar.css";
+import { FaHome } from "react-icons/fa";
 
 export default function NavBar() {
   return (
@@ -6,23 +7,19 @@ export default function NavBar() {
       <nav className="navbar-nav">
         <ul className="navbar-ul">
           <li className="navbar-li">
-            <a href="/" className="navbar-link">
-              Home
+            <a href="/" className="navbar-link home-link">
+              <FaHome />
             </a>
           </li>
-          <li className="navbar-li">
+          <li className="navbar-li center-links">
             <a href="/about" className="navbar-link">
               Sobre
             </a>
-          </li>
-          <li className="navbar-li">
-            <a href="/booklist" className="navbar-link">
-              Lista de livros
-            </a>
-          </li>
-          <li className="navbar-li">
             <a href="/register" className="navbar-link">
               Cadastrar
+            </a>
+            <a href="/booklist" className="navbar-link">
+              Ver Leituras
             </a>
           </li>
         </ul>

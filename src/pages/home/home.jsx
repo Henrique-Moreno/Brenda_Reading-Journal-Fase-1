@@ -6,12 +6,8 @@ export default function Home() {
     <>
       <NavBar />
       <main className="home-container">
-        <h1 className="home-title">Bem-vindo ao Reading Journal!</h1>
-        <p className="home-text">
-          Aqui você pode gerenciar sua lista de livros, cadastrar novos títulos,
-          editar informações e muito mais. Comece agora mesmo a organizar sua
-          leitura!
-        </p>
+        <h1 className="home-title pacifico-regular">Diário de Leitura</h1>
+        <img src="/public/livros-1.svg" alt="Livros" className="home-image" />
       </main>
     </>
   );

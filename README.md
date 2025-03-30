@@ -1,5 +1,5 @@
 <body>
-    <h1>Reading Journal - Projeto Fase 1</h1>
+    <h1>Reading Journal - Projeto Fase 2</h1>
     <p>Este projeto é uma aplicação CRUD (Create, Read, Update, Delete) para gerenciar uma lista de livros, desenvolvida como parte da disciplina de Desenvolvimento de Sistemas Front-end do Curso de Graduação Online da PUCRS.</p>
 
 <h2>📋 Requisitos do Projeto</h2>
@@ -9,6 +9,15 @@
         <li>Listar os livros cadastrados (Read).</li>
         <li>Editar informações dos livros (Update).</li>
         <li>Excluir livros da lista (Delete).</li>
+    </ul>
+
+  <h2>🚀 Tecnologias Utilizadas</h2>
+    <ul>
+        <li><strong>React</strong> - Biblioteca principal para construção da interface</li>
+        <li><strong>Bootstrap</strong> - Para estilização e componentes UI</li>
+        <li><strong>Axios</strong> - Cliente HTTP para consumo da API</li>
+        <li><strong>React Router DOM</strong> - Gerenciamento de rotas</li>
+        <li><strong>Vitest</strong> - Framework para testes unitários</li>
     </ul>
 
 <h2>🚀 Como Executar o Projeto</h2>
@@ -31,6 +40,16 @@
             Abra o navegador e acesse <a href="http://localhost:5173" target="_blank">http://localhost:5173</a>.
         </li>
     </ol>
+
+<h2>🧪 Testes</h2>
+    <p>Para executar os testes do projeto:</p>
+    <pre><code>npm run test</code></pre>
+    <p>Arquivos de teste implementados:</p>
+    <ul>
+        <li><code>BookList.test.jsx</code> - Testes do componente BookList</li>
+        <li><code>NavBar.test.jsx</code> - Testes do componente NavBar</li>
+        <li><code>Register.test.jsx</code> - Testes da página Register</li>
+    </ul>
 
 <h2>🧩 Componentes</h2>
     <p>O projeto é composto pelos seguintes componentes principais:</p>
@@ -63,26 +82,85 @@
             <strong>Sobre:</strong> Página informativa que descreve o propósito do projeto e sua relação com a disciplina da PUCRS.
         </li>
         <li>
-            <strong>Cadastrar:</strong> Página para cadastrar novos livros, utilizando o componente <code>BookForm</code>.
+    <strong>Cadastrar:</strong> Página para cadastro de novos livros que implementa:
+    <ul>
+        <li>Integração com API via Axios (POST /books)</li>
+        <li>Componente BookForm reutilizável para entrada de dados</li>
+        <li>Tratamento completo de erros com try/catch</li>
+        <li>Sistema de notificação Toast para feedback visual:
+            <ul>
+                <li>Toast de sucesso (verde) após cadastro bem-sucedido</li>
+                <li>Toast de erro (vermelho) em caso de falha</li>
+            </ul>
         </li>
-        <li>
-            <strong>Lista de Livros:</strong> Página que exibe a lista de livros cadastrados, com opção de exclusão e edição.
+        <li>Redirecionamento automático para /booklist após 3 segundos no sucesso</li>
+        <li>Estado local gerenciado via useState para controle do Toast</li>
+    </ul>
+</li>
+<li>
+    <strong>Ver leituras:</strong> Página principal que implementa CRUD completo:
+    <ul>
+        <li>Operações API:
+            <ul>
+                <li>GET /books - Carrega a lista inicial de livros</li>
+                <li>POST /books - Adiciona novos livros</li>
+                <li>PUT /books/:id - Atualiza livros existentes</li>
+                <li>DELETE /books/:id - Remove livros</li>
+            </ul>
         </li>
+        <li>Gerenciamento de estado complexo:
+            <ul>
+                <li>Estado para lista de livros (books)</li>
+                <li>Estado para livro em edição (bookToEdit)</li>
+                <li>Controle de notificações Toast</li>
+            </ul>
+        </li>
+        <li>Funcionalidades avançadas:
+            <ul>
+                <li>Scroll automático para o formulário ao editar</li>
+                <li>Formulário dual-mode (adição/edição)</li>
+                <li>Atualização em tempo real da lista após mutações</li>
+            </ul>
+        </li>
+    </ul>
+</li>
     </ul>
 
 <h2>🔧 Decisões de Desenvolvimento</h2>
-    <p>Algumas decisões tomadas durante o desenvolvimento:</p>
-    <ul>
-        <li>
-            <strong>Componentização:</strong> O projeto foi dividido em componentes reutilizáveis, como <code>NavBar</code>, <code>BookForm</code> e <code>BookList</code>.
-        </li>
-        <li>
-            <strong>Estado Local:</strong> O estado da aplicação (lista de livros) foi gerenciado localmente usando o hook <code>useState</code>.
-        </li>
-        <li>
-            <strong>Persistência de Dados:</strong> Para persistir os dados entre recarregamentos da página, foi utilizado o <code>localStorage</code>.
-        </li>
-    </ul>
+<p>Algumas decisões tomadas durante o desenvolvimento:</p>
+<ul>
+    <li>
+        <strong>Componentização:</strong>
+        <ul>
+            <li>Separação clara entre componentes apresentacionais (BookList) e containers (BookListPage)</li>
+            <li>BookForm como componente controlado e reutilizável para criação e edição</li>
+            <li>Isolamento da NavBar como componente independente</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Gerenciamento de Estado:</strong>
+        <ul>
+            <li>Uso estratégico de useState para estado local em cada página</li>
+            <li>Estado compartilhado via props entre componentes pais e filhos</li>
+            <li>Gestão de estado de loading implícita através da renderização condicional</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Integração com API:</strong>
+        <ul>
+            <li>Configuração centralizada do Axios com baseURL e headers padrão</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Experiência do Usuário:</strong>
+        <ul>
+            <li>Implementação de Bootstrap Toasts para feedback visual das operações</li>
+            <li>Redirecionamento automático após ações</li>
+            <li>Scroll automático para o formulário durante edição</li>
+            <li>Formulário dual-mode criação / edição</li>
+        </ul>
+    </li>
+</ul>
 
 <h2>📝 Licença</h2>
     <p>Este projeto é open-source e está sob a licença MIT. Sinta-se à vontade para utilizá-lo e modificá-lo conforme necessário.</p>

@@ -25,7 +25,7 @@
     <ol>
         <li>
             <strong>Navegue até a pasta do projeto:</strong>
-            <pre><code>cd Brenda_Reading-Journal-Fase-1</code></pre>
+            <pre><code>cd Brenda_Reading-Journal-Fase-2</code></pre>
         </li>
         <li>
             <strong>Instale as dependências:</strong>
@@ -98,7 +98,7 @@
     </ul>
 </li>
 <li>
-    <strong>Ver leituras:</strong> Página principal que implementa CRUD completo:
+    <strong>Ver leituras:</strong> Página principal que implementa CRUD:
     <ul>
         <li>Operações API:
             <ul>
@@ -108,7 +108,7 @@
                 <li>DELETE /books/:id - Remove livros</li>
             </ul>
         </li>
-        <li>Gerenciamento de estado complexo:
+        <li>Gerenciamento de estado:
             <ul>
                 <li>Estado para lista de livros (books)</li>
                 <li>Estado para livro em edição (bookToEdit)</li>
